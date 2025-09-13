@@ -7,7 +7,14 @@ class StringCalculator
       header, numbers = numbers.split("\n", 2)
       delimiter = Regexp.escape(header[2]) # get char after `//`
     end
+    
+    parts = numbers.split(/#{delimiter}/).map(&:to_i)
+    
+    negatives = parts.select { |n| n < 0 }
+    unless negatives.empty?
+      raise ArgumentError, "negative numbers not allowed #{negatives.join(',')}"
+    end
 
-    numbers.split(/#{delimiter}/).map(&:to_i).sum
+    parts.sum
   end
 end
