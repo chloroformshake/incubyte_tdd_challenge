@@ -22,3 +22,10 @@ Green: write minimal code to pass it (laws #1 + #3).
 
 Refactor: improve code while keeping tests green.
 ````
+
+## First SS after adding the failed test case for string calculator and then running it
+
+<img width="1512" height="982" alt="Screenshot 2025-09-13 at 2 54 11 PM" src="https://github.com/user-attachments/assets/18ad30b2-3d88-4f4d-96b1-c45de54be892" />
+
+
+
