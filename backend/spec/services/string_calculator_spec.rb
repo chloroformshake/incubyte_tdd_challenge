@@ -27,9 +27,14 @@ RSpec.describe StringCalculator do
         expect(calculator.add("67\n7,6")).to eq(80)
     end
 
-    it 'supports a custom single-character delimiter' do
+    it 'supports a custom single-character (|) delimiter' do
         calculator = StringCalculator.new
         expect(calculator.add("//|\n6|9")).to eq(15)
+    end
+
+    it 'supports a custom single-character (@) delimiter' do
+        calculator = StringCalculator.new
+        expect(calculator.add("//@\n2@3")).to eq(5)
     end
 
   end
