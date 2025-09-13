@@ -22,5 +22,10 @@ RSpec.describe StringCalculator do
         expect(calculator.add('6,2,3,12,5')).to eq(28)
     end
 
+    it 'returns the sum when numbers with new lines & even commas' do
+        calculator = StringCalculator.new
+        expect(calculator.add("67\n7,6")).to eq(80)
+    end
+
   end
 end
