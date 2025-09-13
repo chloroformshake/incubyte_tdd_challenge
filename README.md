@@ -27,5 +27,10 @@ Refactor: improve code while keeping tests green.
 
 <img width="1512" height="982" alt="Screenshot 2025-09-13 at 2 54 11 PM" src="https://github.com/user-attachments/assets/18ad30b2-3d88-4f4d-96b1-c45de54be892" />
 
+## Second SS after adding the failed test case for single number for string calculator and then running it
+
+<img width="1512" height="982" alt="Screenshot 2025-09-13 at 3 24 43 PM" src="https://github.com/user-attachments/assets/19d50754-efc1-4451-892d-5be3d124fc31" />
+
+
 
 
