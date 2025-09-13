@@ -23,18 +23,25 @@ Green: write minimal code to pass it (laws #1 + #3).
 Refactor: improve code while keeping tests green.
 ````
 
-## First failed test case report for non-existing string calculator
+## First failed test case SS for non-existing string calculator
 
 <img width="1512" height="982" alt="Screenshot 2025-09-13 at 2 54 11 PM" src="https://github.com/user-attachments/assets/18ad30b2-3d88-4f4d-96b1-c45de54be892" />
 
-## Second failed test case report for returning when only single number
+## Second failed test case SS for returning when only single number
 
 <img width="1512" height="982" alt="Screenshot 2025-09-13 at 3 24 43 PM" src="https://github.com/user-attachments/assets/19d50754-efc1-4451-892d-5be3d124fc31" />
 
-## Third failed test case report for sum of two comma separated numbers
+## Third failed test case SS for sum of two comma separated numbers
 
 <img width="1512" height="982" alt="Screenshot 2025-09-13 at 3 35 19 PM" src="https://github.com/user-attachments/assets/f4abc926-60a7-4f0a-83f2-a6e02a1c205e" />
 
+## Fouth failed test case SS for newlines with commas in string input
+
+<img width="1098" height="706" alt="Screenshot 2025-09-13 at 3 59 49 PM" src="https://github.com/user-attachments/assets/7239b2fd-7e2e-43ad-806c-ecd865ae5faf" />
+
+## Fifth failed test case SS for custom single char delimiter
+
+<img width="1055" height="682" alt="Screenshot 2025-09-13 at 4 24 31 PM" src="https://github.com/user-attachments/assets/20a5eb1e-39c0-48da-ab45-23f5d25008a5" />
 
 
-
+# Adding more test cases, check commits!
