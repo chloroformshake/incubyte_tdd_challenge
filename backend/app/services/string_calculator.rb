@@ -12,7 +12,12 @@ class StringCalculator
         delimiter = /,|\n/
         if numbers.start_with?("//")
             header, numbers = numbers.split("\n", 2)
-            delimiter = Regexp.escape(header[2]) # get char after `//`
+            if header.start_with?("//[")
+                # grab content between square brackets
+                delimiter = Regexp.escape(header[/\[(.+)\]/, 1])
+            else
+                delimiter = Regexp.escape(header[2])
+            end
         end
         
         # split the numbers
