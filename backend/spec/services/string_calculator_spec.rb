@@ -65,5 +65,10 @@ RSpec.describe StringCalculator do
         expect(calculator.add("//[***]\n1***2***3")).to eq(6)
     end
 
+    it 'supports multiple delimiters' do
+        calculator = StringCalculator.new
+        expect(calculator.add("//[*][%]\n99*4%3")).to eq(106)
+    end
+
   end
 end
