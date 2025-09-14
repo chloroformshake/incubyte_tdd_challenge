@@ -57,7 +57,7 @@ RSpec.describe StringCalculator do
 
     it 'ignores numbers bigger than 1000' do
         calculator = StringCalculator.new
-        expect(calculator.add("8,2,2,1001,1022")).to eq(8,2,2)
+        expect(calculator.add("8,2,2,1001,1022")).to eq(12)
     end
 
   end
