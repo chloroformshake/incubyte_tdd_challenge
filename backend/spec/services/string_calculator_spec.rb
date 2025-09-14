@@ -47,12 +47,17 @@ RSpec.describe StringCalculator do
     expect { calculator.add("2,-4,3,-5") }
         .to raise_error(ArgumentError, "negative numbers not allowed -4,-5")
     end
-    
+
     it 'returns how many times add has been called' do
         calculator = StringCalculator.new
         calculator.add("1,2")
         calculator.add("3")
         expect(calculator.get_called_count).to eq(2)
+    end
+
+    it 'ignores numbers bigger than 1000' do
+        calculator = StringCalculator.new
+        expect(calculator.add("8,2,2,1001,1022")).to eq(8,2,2)
     end
 
   end
