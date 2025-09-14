@@ -9,19 +9,28 @@ class StringCalculator
         return 0 if numbers.empty?
 
         # get the delimiter
-        delimiter = /,|\n/
+        delimiters = [/,|\n/]
         if numbers.start_with?("//")
             header, numbers = numbers.split("\n", 2)
+
             if header.start_with?("//[")
-                # grab content between square brackets
-                delimiter = Regexp.escape(header[/\[(.+)\]/, 1])
+                # collect all delimiters inside [ ]
+                raw_delimiters = header.scan(/\[(.*?)\]/).flatten
+                delimiters = raw_delimiters.map { |d| Regexp.new(Regexp.escape(d)) }
             else
-                delimiter = Regexp.escape(header[2])
+                # handle single-character custom delimiter
+                delimiters = [Regexp.new(Regexp.escape(header[2..]))]
             end
+        end
+
+        # replace all delimiters with a consistent char
+        normalized = numbers
+        delimiters.each do |delimiter|
+            normalized = normalized.gsub(delimiter, ',')
         end
         
         # split the numbers
-        parts = numbers.split(/#{delimiter}/).map(&:to_i)
+        parts = normalized.split(',').map { |n| n.strip.to_i }
         
         # check for negative numbers
         negatives = parts.select { |n| n < 0 }
